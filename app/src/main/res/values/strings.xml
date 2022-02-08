@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Practica 8</string>
+    <string name="txt_phone_number">Número de Teléfono</string>
+    <string name="txt_ci_number">Número de Cédula</string>
+    <string name="txt_amount">Monto</string>
+    <string name="btn_pay">Generar orden de pago</string>
 </resources>
