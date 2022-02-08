@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultPaymentActivity">
+
+  <TextView
+      android:id="@+id/textViewEmail"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="24dp"
+      android:text="Email: "
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/editTextTransactionId" />
+
+  <TextView
+      android:id="@+id/textViewClientTransactionId"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="# Transacción: "
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="@+id/textViewEmail"
+      app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
+
+  <TextView
+      android:id="@+id/textViewPhoneNumber2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="# Teléfono: "
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="@+id/textViewClientTransactionId"
+      app:layout_constraintTop_toBottomOf="@+id/textViewClientTransactionId" />
+
+  <TextView
+      android:id="@+id/textViewDocument"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="Status: "
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="@+id/textViewPhoneNumber2"
+      app:layout_constraintTop_toBottomOf="@+id/textViewPhoneNumber2" />
+
+  <TextView
+      android:id="@+id/textViewAmount2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="# Cédula: "
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="@+id/textViewDocument"
+      app:layout_constraintTop_toBottomOf="@+id/textViewDocument" />
+
+  <TextView
+      android:id="@+id/textViewTransactionStatus"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="Monto: "
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="@+id/textViewAmount2"
+      app:layout_constraintTop_toBottomOf="@+id/textViewAmount2" />
+
+  <Button
+      android:id="@+id/button2"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="32dp"
+      android:onClick="openMain"
+      android:text="Generar otra orden de pago"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@+id/textViewTransactionStatus"
+      app:layout_constraintTop_toBottomOf="@+id/textViewTransactionStatus" />
+
+  <ImageView
+      android:id="@+id/imageView"
+      android:layout_width="69dp"
+      android:layout_height="64dp"
+      android:layout_marginTop="16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/logo_payphone" />
+
+  <TextView
+      android:id="@+id/textView8"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="Detalle Transacción"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+  <EditText
+      android:id="@+id/editTextTransactionId"
+      android:layout_width="275dp"
+      android:layout_height="48dp"
+      android:layout_marginStart="32dp"
+      android:ems="10"
+      android:hint="# Transacción"
+      android:inputType="textPersonName"
+      app:layout_constraintBaseline_toBaselineOf="@+id/button3"
+      app:layout_constraintEnd_toStartOf="@+id/button3"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <Button
+      android:id="@+id/button3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="32dp"
+      android:onClick="updateTransactionDetails"
+      android:text="Ver"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/editTextTransactionId"
+      app:layout_constraintTop_toBottomOf="@+id/textView8" />
+</androidx.constraintlayout.widget.ConstraintLayout>

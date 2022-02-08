@@ -11,6 +11,7 @@ import com.google.gson.Gson;
 
 import app.smty.practica8.Models.RequestForPayment;
 import app.smty.practica8.Models.ResponseSale;
+import app.smty.practica8.Models.ResponseSaleClient;
 import app.smty.practica8.Services.PayPhoneService;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -66,14 +67,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void openResponseSaleClient(int transactionId) {
+        Intent intent = new Intent(MainActivity.this, ResultPaymentActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("transaction", String.valueOf(transactionId));
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+
     private void openPayPhoneApp(ResponseSale responseSale){
         Intent intent = new Intent("payPhone_Android.PayPhone_Android.Purchase");
         Gson gson = new Gson();
         intent.putExtra("otherApp", true);
+
         String parameters = gson.toJson(responseSale);
         intent.putExtra("parameters", parameters);
         intent.putExtra("package", getPackageName());
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
         startActivity(intent);
     }
 
@@ -122,5 +133,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return true;
+    }
+
+    public void viewTransaction(View view) {
+        Intent intent = new Intent(this, ResultPaymentActivity.class);
+        startActivity(intent);
     }
 }
