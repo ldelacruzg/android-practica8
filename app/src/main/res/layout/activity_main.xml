@@ -100,6 +100,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:onClick="generateRequestForPyment"
         android:text="@string/btn_pay"
         app:layout_constraintEnd_toEndOf="@+id/editTextAmount"
         app:layout_constraintStart_toStartOf="@+id/editTextAmount"

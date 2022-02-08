@@ -1,7 +1,16 @@
 <resources>
     <string name="app_name">Practica 8</string>
     <string name="txt_phone_number">Número de Teléfono</string>
+    <string name="txt_phone_number_error">Introduzca un número de teléfono válido</string>
+
     <string name="txt_ci_number">Número de Cédula</string>
+    <string name="txt_ci_number_error">Introduzca un número de cédula válido</string>
+
     <string name="txt_amount">Monto</string>
+    <string name="txt_amount_error">Introduzca un valor mayor o igual a 1.00$</string>
+
+    <string name="txt_country_code">Cód. País</string>
+    <string name="txt_country_code_error">Introduzca un código de país válido</string>
+
     <string name="btn_pay">Generar orden de pago</string>
 </resources>
